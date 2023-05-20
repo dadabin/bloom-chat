@@ -2,7 +2,7 @@ from transformers import LlamaTokenizer, LlamaForCausalLM, pipeline, AutoConfig
 
 
 def load_model():
-    model_path = "/data/home/sunwubin/baihai_20230511"
+    model_path = "/data/model/20230511"
     tokenizer = LlamaTokenizer.from_pretrained(model_path, fast_tokenizer=True)
     tokenizer.add_special_tokens({'pad_token': '[PAD]'})
     tokenizer.padding_side = "left"
